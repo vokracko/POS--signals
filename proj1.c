@@ -31,7 +31,11 @@ int main(void)
 		return EXIT_FAILURE;
 
 	sigact_usr1.sa_handler = sighandler_usr1;
+	sigact_usr1.sa_flags = 0;
+	sigemptyset(&sigact_usr1.sa_mask);
+	sigact_usr2.sa_flags = 0;
 	sigact_usr2.sa_handler = sighandler_usr2;
+	sigemptyset(&sigact_usr2.sa_mask);
 
 	if(sigaction(SIGUSR1, &sigact_usr1, NULL) > 0) 
 		return EXIT_FAILURE;
