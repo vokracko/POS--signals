@@ -2,8 +2,8 @@ CC=gcc
 CFLAGS=-Wall -Wextra -pedantic
 
 all:
-	$(CC) $(CFLAGS) proj1.c -o proj1 -lpthread
+	$(CC) $(CFLAGS) proj01.c -o proj01 -lpthread
 
 clean:
-	rm -f proj1
+	rm -f proj01
 
